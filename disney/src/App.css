@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  color: #fff;
+}
+
+.container {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
+  background-image: url('https://images.idgesg.net/images/article/2019/11/disney-plus-logo-100817726-large.jpg');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+  overflow: scroll;
+}
+
+.main-form {
+  margin: 0 auto;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+#description {
+  font-style: italic;
+}
+
+#title,
+#description {
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+form {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1.2rem 2rem;
+  border-radius: 0.3rem;
+  /*     background-color: hsl(220, 87%, 53%); */
+  /*   background: linear-gradient(#e66465, hsl(220, 87%, 53%)); */
+  background: linear-gradient(#bd353b, #3340db);
+  /*   background: linear-gradient(#A76BFE, #3340DB); */
+  opacity: 0.95;
+}
+
+span {
+  color: red;
+  /*   margin-left: 0.5rem; */
+}
+
+label {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  display: block;
+  line-height: 2.5;
+  border-radius: 0.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.1rem 0.75rem;
+  font-size: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+/* h1 {
+  white-space: nowrap;
+  font-size: 0.8rem;
+}  */
+
+.question {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.input-radio {
+  margin-right: 0.5rem;
+}
+
+.input-checkbox {
+  margin-right: 0.5rem;
+}
+
+.recommend label {
+  font-size: 0.75rem;
+}
+
+.favorite-features label {
+  font-size: 0.75rem;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 2rem;
+  margin-top: 0.8rem;
+  border-radius: 0.3rem;
+  background-color: #bff5fd;
+  color: inherit;
+  border-radius: 0.5rem;
+}
+
+select {
+  height: 2rem;
+}
+
+small {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* feedback */
+
+.main-feedback {
+  background-image: linear-gradient(#113ccf, #bff5fd);
+  height: 100%;
+  width: 100%;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70%;
+  width: 80%;
+  margin: auto;
+}
+
+.fa-check-circle {
+  font-size: 7rem;
+  display: block;
+  margin-bottom: 3rem;
+  color: aquamarine;
+}
+
+.feedback h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.feedback p {
+  font-size: 2rem;
+}
+
+/* Width between 768px and 1024px */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.7em;
+  }
+
+  form {
+    padding: 30;
+  }
+}
+
+/* Width between 768px and 1024px */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 0.8rem;
+    /*     padding: 0.25rem 1rem; */
+    white-space: nowrap;
+  }
+
+  .main-form {
+    margin: 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  form {
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+/* Width between 320px and 768px */
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 0.8rem;
+    /*     padding: 0.25rem 1rem; */
+    white-space: nowrap;
+  }
+
+  .main-form {
+    margin: 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  .form-control {
+    line-height: 1.7;
+    border-radius: 0.2rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.05rem 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  select {
+    height: 1.5rem;
+  }
+
+  button,
+  textarea {
+    font-size: 0.8rem;
+  }
+
+  label {
+    padding: 0.15rem 0;
+  }
+}

@@ -12,7 +12,7 @@ const Submit = require('../../models/Submit');
 router.get('/', auth, async (req, res) => {
   try {
     const userSubmit = await Submit.findById(req.userSubmit.id);
-    res.json(userSubmit);
+    res.json(userSubmit.name);
   } catch (err) {
     console.error(err.message);
     res.status(500).json('Server Error');
