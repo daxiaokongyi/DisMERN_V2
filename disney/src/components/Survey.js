@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { submit } from '../../actions/submit';
 import { connect } from 'react-redux';
+import { submit } from '../actions/submit';
 import PropTypes from 'prop-types';
 
 const Survey = ({ submit, loading }) => {
@@ -31,9 +31,9 @@ const Survey = ({ submit, loading }) => {
     return <Redirect to='/feedback' />;
   }
 
-  const onRadioChange = (e) => {
-    setFormData({ ...formData, recommend: e.target.value });
-  };
+  //   const onRadioChange = (e) => {
+  //     setFormData({ ...formData, recommend: e.target.value });
+  //   };
 
   const onCheckBoxChange = (e) => {
     if (e.target.checked) {
@@ -129,7 +129,8 @@ const Survey = ({ submit, loading }) => {
                   className='input-radio'
                   value='Definitely'
                   checked={recommend === 'Definitely'}
-                  onChange={(e) => onRadioChange(e)}
+                  //   onChange={(e) => onRadioChange(e)}
+                  onChange={(e) => onChange(e)}
                   required
                 />
                 Definitely
@@ -141,7 +142,8 @@ const Survey = ({ submit, loading }) => {
                   className='input-radio'
                   value='Maybe'
                   checked={recommend === 'Maybe'}
-                  onChange={(e) => onRadioChange(e)}
+                  //   onChange={(e) => onRadioChange(e)}
+                  onChange={(e) => onChange(e)}
                 />
                 Maybe
               </label>
@@ -152,7 +154,8 @@ const Survey = ({ submit, loading }) => {
                   className='input-radio'
                   value='Not Sure'
                   checked={recommend === 'Not Sure'}
-                  onChange={(e) => onRadioChange(e)}
+                  //   onChange={(e) => onRadioChange(e)}
+                  onChange={(e) => onChange(e)}
                 />
                 Not Sure
               </label>
