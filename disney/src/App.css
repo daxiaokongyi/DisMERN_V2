@@ -174,13 +174,15 @@ small {
 
 .alert {
   padding: 0.8rem;
-  margin-bottom: 1rem;
   opacity: 0.9;
-  background: #f4f4f4;
-  color: #333;
+  background-color: rgba(246, 84, 106);
+  color: #fff;
   border-radius: 0.2rem;
-  opacity: 0.85;
-  width: 100%;
+  opacity: 0.75;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 0.2rem;
 }
 
 /* Width between 768px and 1024px */
@@ -198,7 +200,7 @@ small {
   }
 }
 
-/* Width between 768px and 1024px */
+/* Width between 320px and 768px */
 
 @media (max-width: 768px) {
   h1 {
@@ -216,9 +218,24 @@ small {
   form {
     padding: 0.8rem 1.6rem;
   }
+
+  /* alert */
+
+  .alert {
+    font-size: 0.65rem;
+    padding: 0.8rem;
+    opacity: 0.9;
+    background-color: rgba(246, 84, 106);
+    color: #fff;
+    border-radius: 0.2rem;
+    opacity: 0.75;
+    width: 80%;
+    text-align: center;
+    margin: 0.2rem auto;
+  }
 }
 
-/* Width between 320px and 768px */
+/* Width 320px*/
 
 @media (max-width: 320px) {
   h1 {
