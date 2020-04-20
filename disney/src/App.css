@@ -170,6 +170,19 @@ small {
   font-size: 2rem;
 }
 
+/* alert */
+
+.alert {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  background: #f4f4f4;
+  color: #333;
+  border-radius: 0.2rem;
+  opacity: 0.85;
+  width: 100%;
+}
+
 /* Width between 768px and 1024px */
 @media (max-width: 1024px) {
   h1 {

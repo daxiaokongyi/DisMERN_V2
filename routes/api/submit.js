@@ -54,7 +54,7 @@ router.post(
       if (userSubmit) {
         // remeber to add return in front of res to exit
         return res.status(400).json({
-          erros: [
+          errors: [
             { msg: 'This Email already submitted. Please use another email.' },
           ],
         });

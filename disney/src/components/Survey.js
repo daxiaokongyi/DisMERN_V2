@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { submit } from '../actions/submit';
 import PropTypes from 'prop-types';
 
-const Survey = ({ submit, loading }) => {
+const Survey = ({ submit, loading, token }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,11 +23,12 @@ const Survey = ({ submit, loading }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     // console.log({ name, email, age, role, recommend, features, comments });
+    // console.log(alert.length === 0);
     submit({ name, email, age, role, recommend, features, comments });
   };
 
   // Redirect if submit passed
-  if (loading === false) {
+  if (loading === false && token !== null) {
     return <Redirect to='/feedback' />;
   }
 
@@ -64,7 +65,7 @@ const Survey = ({ submit, loading }) => {
                 name='name'
                 value={name}
                 onChange={(e) => onChange(e)}
-                required
+                // required
               />
             </div>
             <div className='form-group'>
@@ -79,7 +80,7 @@ const Survey = ({ submit, loading }) => {
                 name='email'
                 value={email}
                 onChange={(e) => onChange(e)}
-                required
+                // required
               />
             </div>
             <div className='form-group'>
@@ -106,7 +107,7 @@ const Survey = ({ submit, loading }) => {
                 className='form-control'
                 value={role}
                 onChange={(e) => onChange(e)}
-                required
+                // required
               >
                 <option value='' disabled>
                   -- Select current role --
@@ -131,7 +132,7 @@ const Survey = ({ submit, loading }) => {
                   checked={recommend === 'Definitely'}
                   //   onChange={(e) => onRadioChange(e)}
                   onChange={(e) => onChange(e)}
-                  required
+                  // required
                 />
                 Definitely
               </label>
@@ -254,10 +255,12 @@ const Survey = ({ submit, loading }) => {
 Survey.propTypes = {
   submit: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
+  token: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   loading: state.submit.loading,
+  token: state.submit.token,
 });
 
 export default connect(mapStateToProps, { submit })(Survey);
